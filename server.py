@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, request, render_template, redirect, url_for, send_file
 from app import Encryption
 
 object = Encryption()
@@ -20,13 +20,13 @@ def inputFile():
 def test():
 	return render_template('output.html', uff = 'Love You')
 
-@app.route('/received', methods=['GET'])
+@app.route('/received', methods=['GET', 'POST'])
 def received():
 	if request.method == 'GET':
 		text = request.args.get('code')
-		b = object.open_file(text)
+		b, h = object.open_file(text)
 
-		return render_template('output.html', uff = b)
+		return render_template('output.html', uff = b, decrypt = h)
 
 if __name__ == '__main__':
 	app.run('0.0.0.0', 5000, True)

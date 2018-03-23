@@ -51,7 +51,7 @@ class Encryption():
         x=random.randrange(1,1000)
         wx=chr(x)
 
-        wr= str(self.r) +"_encryptCode_"+wx+".txt"  # use this variable to get the file of encrypted code
+        wr= "./templates/scriptKey.txt"  # use this variable to get the file of encrypted code
         fw = open(wr, 'w')
         for i in range(0,len(alpha)):
             fw.write(alpha[i]+ "\n")
@@ -92,5 +92,7 @@ class Encryption():
                 if ch == j :
                     self.new_file = self.new_file + k + " "
                     break
+        h = open('./templates/scriptKey.txt', 'r')
+        mm = h.read()
 
-        return self.new_file
+        return self.new_file, mm
