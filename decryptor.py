@@ -13,7 +13,7 @@ class decryptor :
 
         for i in fk.split(" "):
             sub = i
-            self.stored_key[sub] = chr(a + 33)
+            self.stored_key[sub] = chr(a + 32)
             a = a + 1
         #print(self.stored_key)
 
@@ -41,7 +41,7 @@ class decryptor :
     def new_extracted_file(self):
         #f2 = open('extracted_' + self.name_file[0:3]+'.txt', 'w')
         #f2.write(self.ene)
-        return self.ene
+        return self.ene[:-1]
 
 
 

@@ -22,7 +22,7 @@ class Encryption():
         # where it is declared from 1 to 26 as reserved for the alphabets
         #  after which it can be used for teh storing for numeric codes
 
-        for i in range(33, 3000) :
+        for i in range(32, 3000) :
             a = [4]
             b = [4]
             for j in range(1,5):    # for the string part of the code
@@ -60,13 +60,13 @@ class Encryption():
 
 
     def dic_alpha_assign(self):
-        for i in range(33, 3000):
+        for i in range(32, 3000):
             al.append(chr(i))
         self.dic_assign()
 
     def dic_assign(self):
 
-        for i in range(2967): # clever to check this..!!!!hehehehe
+        for i in range(0,2968): # clever to check this..!!!!hehehehe
             trail[al[i]] = alpha[i]
             dic.update(trail)
 
@@ -94,5 +94,6 @@ class Encryption():
                     break
         h = open('./templates/scriptKey.txt', 'r')
         mm = h.read()
-
+        print(dic)
         return self.new_file, mm
+
