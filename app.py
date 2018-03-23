@@ -94,6 +94,6 @@ class Encryption():
                     break
         h = open('./templates/scriptKey.txt', 'r')
         mm = h.read()
-        print(dic)
+        #print(dic)
         return self.new_file, mm
 
