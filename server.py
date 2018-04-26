@@ -43,7 +43,7 @@ def decryptionProcess():
 		got = object2.new_extracted_file()
 		#print(got)
 		return render_template('decryptedCode.html', message = got)
-'''
+
 if __name__ == '__main__':
 	app.run('0.0.0.0', 5000, True)
-'''
+
