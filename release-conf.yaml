@@ -1,0 +1,13 @@
+changelog:
+  - Release for encryption engine web application
+  - Hosts at default heroku platform
+  
+author_name: Harkishen Singh
+author_email: harkishensingh@hotmail.com
+
+fedora: false
+
+lables:
+  - Encryption engine
+  - python
+  - handled by user-bot-harkishen-release
